@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["August Lilleaas", "Logan Raarup"]
-  s.date = %q{2010-09-22}
+  s.date = %q{2010-10-07}
   s.description = %q{      More is a plugin for Ruby on Rails applications. It automatically
     	parses your applications .less files through LESS and outputs CSS files.
 }
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "init.rb",
      "lib/less/controller_extension.rb",
      "lib/less/more.rb",
+     "lib/less/railtie.rb",
      "lib/tasks/more_tasks.rake",
      "test/controller_test.rb",
      "test/more_test.rb",
@@ -33,9 +34,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{LESS on Rails}
   s.test_files = [
-    "test/controller_test.rb",
-     "test/more_test.rb",
-     "test/test_helper.rb"
+    "test/test_helper.rb",
+     "test/controller_test.rb",
+     "test/more_test.rb"
   ]
 
   if s.respond_to? :specification_version then

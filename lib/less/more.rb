@@ -15,11 +15,8 @@ rescue LoadError => e
 end
 
 if defined?(Rails)
-  class Less::Railtie < Rails::Railtie
-    rake_tasks do
-      load 'tasks/more_tasks.rake'
-    end
-  end
+  require File.join(File.dirname(__FILE__), 'railtie') if defined?(Rails::Railtie)
+  require File.join(File.dirname(__FILE__), 'controller_extension') if Rails.env == 'development'
 end
 
 class Less::More
